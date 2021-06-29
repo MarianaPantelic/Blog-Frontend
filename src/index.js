@@ -40,7 +40,7 @@ const App = () => {
 
   const sendGetRequest = async () => {
     try {
-      const resp = await axios.get("http://localhost:3001/blog");
+      const resp = await axios.get("https://marianasblog.herokuapp.com/blog");
       setPosts(resp.data);
       console.log(resp.data);
     } catch (error) {
@@ -50,7 +50,7 @@ const App = () => {
 
   const sendUserGetRequest = async () => {
     try {
-      const resp = await axios.get("http://localhost:3001/users");
+      const resp = await axios.get("https://marianasblog.herokuapp.com/users");
       setUsers(resp.data);
       console.log(resp.data);
     } catch (error) {
@@ -62,7 +62,7 @@ const App = () => {
     console.log(userName);
     try {
       const resp = await axios.get(
-        `http://localhost:3001/profile?user=${userName}`
+        `https://marianasblog.herokuapp.com/profile?user=${userName}`
       );
       setUserPosts(resp.data);
       console.log(resp.data);

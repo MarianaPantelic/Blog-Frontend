@@ -52,7 +52,7 @@ const Post = (props) => {
     try {
       await axios
         .post(
-          "http://localhost:3001/blog",
+          "https://marianasblog.herokuapp.com/blog",
           {
             user: user.userName,
             title: titleRef.current.value,
@@ -80,7 +80,7 @@ const Post = (props) => {
     try {
       await axios
         .put(
-          `http://localhost:3001/blog/${id}`,
+          `https://marianasblog.herokuapp.com/blog/${id}`,
           {
             title: titleRef.current.value,
             content: content,

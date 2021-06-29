@@ -11,7 +11,7 @@ const Blog = (props) => {
     try {
       axios
         .delete(
-          `http://localhost:3001/blog/${id}`,
+          `https://marianasblog.herokuapp.com/blog/${id}`,
           {
             data: { _id: id },
           },
@@ -31,7 +31,7 @@ const Blog = (props) => {
     try {
       axios
         .put(
-          `http://localhost:3001/blog/${id}`,
+          `https://marianasblog.herokuapp.com/blog/${id}`,
           {
             clicked: true,
           },
@@ -49,7 +49,7 @@ const Blog = (props) => {
     try {
       axios
         .put(
-          `http://localhost:3001/blog/${id}`,
+          `https://marianasblog.herokuapp.com/blog/${id}`,
           {
             likes: foundPost.likes + 1,
           },

@@ -10,11 +10,14 @@ const Register = (props) => {
   const addUser = async () => {
     try {
       console.log("add user");
-      const resp = await axios.post("http://localhost:3001/users", {
-        userName: userNameRef.current.value,
-        email: emailRef.current.value,
-        password: passwordRef.current.value,
-      });
+      const resp = await axios.post(
+        "https://marianasblog.herokuapp.com/users",
+        {
+          userName: userNameRef.current.value,
+          email: emailRef.current.value,
+          password: passwordRef.current.value,
+        }
+      );
       props.sendUserGetRequest();
       console.log(resp.data);
       localStorage.setItem("token", resp.data.token);
