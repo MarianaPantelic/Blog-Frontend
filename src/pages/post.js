@@ -16,7 +16,7 @@ const Post = (props) => {
   const titleRef = useRef();
 
   useEffect(() => {
-    checkPost();
+    if (quill) checkPost();
     const user = JSON.parse(localStorage.getItem("user"));
     console.log(user);
     setUser(user);
