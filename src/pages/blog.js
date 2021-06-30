@@ -7,7 +7,7 @@ const axios = require("axios").default;
 const Blog = (props) => {
   let contentHTML = null;
 
-  const deletePost = async (id) => {
+  /* const deletePost = async (id) => {
     try {
       axios
         .delete(
@@ -42,7 +42,7 @@ const Blog = (props) => {
       console.log(error);
     }
   };
-
+ */
   const increaseLikes = async (id) => {
     const foundPost = props.posts.find((post) => post._id === id);
     console.log(foundPost.likes);
@@ -93,7 +93,7 @@ const Blog = (props) => {
                   >
                     <i class="fas fa-thumbs-up fa-2x"></i>
                   </span>
-                  <Link to={"/post"}>
+                  {/* <Link to={"/post"}>
                     <span
                       className="m-3"
                       onClick={() => updatePost(element._id)}
@@ -105,7 +105,7 @@ const Blog = (props) => {
 
                   <span className="m-3" onClick={() => deletePost(element._id)}>
                     <i class="fas fa-trash-alt fa-2x"></i>
-                  </span>
+                  </span> */}
                 </div>
               </div>
             );
