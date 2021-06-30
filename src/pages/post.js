@@ -42,8 +42,7 @@ const Post = (props) => {
       );
       const contentHTML = converter.convert();
       titleRef.current.value = clickedPost.title;
-      //quill.clipboard.dangerouslyPasteHTML(contentHTML);
-      quillRef = contentHTML;
+      quill.clipboard.dangerouslyPasteHTML(contentHTML);
     }
   };
 
