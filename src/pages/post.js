@@ -51,17 +51,13 @@ const Post = (props) => {
 
     try {
       await axios
-        .post(
-          "https://marianasblog.herokuapp.com/blog",
-          {
-            user: user.userName,
-            title: titleRef.current.value,
-            content: content,
-            clicked: false,
-            likes: 0,
-          },
-          { headers: { "x-auth": localStorage.getItem("token") } }
-        )
+        .post("https://marianasblog.herokuapp.com/blog", {
+          user: user.userName,
+          title: titleRef.current.value,
+          content: content,
+          clicked: false,
+          likes: 0,
+        })
         .then((resp) => props.sendGetRequest());
       window.location.replace("/blog");
       userRef.current.value = "";
@@ -79,15 +75,11 @@ const Post = (props) => {
     const content = quill.getContents();
     try {
       await axios
-        .put(
-          `https://marianasblog.herokuapp.com/blog/${id}`,
-          {
-            title: titleRef.current.value,
-            content: content,
-            clicked: false,
-          },
-          { headers: { "x-auth": localStorage.getItem("token") } }
-        )
+        .put(`https://marianasblog.herokuapp.com/blog/${id}`, {
+          title: titleRef.current.value,
+          content: content,
+          clicked: false,
+        })
         .then((resp) => props.sendGetRequest());
       titleRef.current.value = "";
       quill.clipboard.dangerouslyPasteHTML("");

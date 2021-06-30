@@ -48,13 +48,9 @@ const Blog = (props) => {
     console.log(foundPost.likes);
     try {
       axios
-        .put(
-          `https://marianasblog.herokuapp.com/blog/${id}`,
-          {
-            likes: foundPost.likes + 1,
-          },
-          { headers: { "x-auth": localStorage.getItem("token") } }
-        )
+        .put(`https://marianasblog.herokuapp.com/blog/${id}`, {
+          likes: foundPost.likes + 1,
+        })
         .then((resp) => props.sendGetRequest());
     } catch (error) {
       console.log(error);

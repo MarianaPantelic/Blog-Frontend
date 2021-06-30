@@ -11,13 +11,9 @@ const Profile = (props) => {
   const deletePost = async (id) => {
     try {
       axios
-        .delete(
-          `https://marianasblog.herokuapp.com/blog/${id}`,
-          {
-            data: { _id: id },
-          },
-          { headers: { "x-auth": localStorage.getItem("token") } }
-        )
+        .delete(`https://marianasblog.herokuapp.com/blog/${id}`, {
+          data: { _id: id },
+        })
         .then((resp) => {
           props.sendGetRequest();
         });
@@ -31,13 +27,9 @@ const Profile = (props) => {
     console.log(foundPost);
     try {
       axios
-        .put(
-          `https://marianasblog.herokuapp.com/blog/${id}`,
-          {
-            clicked: true,
-          },
-          { headers: { "x-auth": localStorage.getItem("token") } }
-        )
+        .put(`https://marianasblog.herokuapp.com/blog/${id}`, {
+          clicked: true,
+        })
         .then((resp) => props.sendGetRequest());
     } catch (error) {
       console.log(error);
