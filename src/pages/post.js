@@ -16,8 +16,6 @@ const Post = (props) => {
   const titleRef = useRef();
 
   useEffect(() => {
-    titleRef.current.value = "";
-    quill.clipboard.dangerouslyPasteHTML("");
     checkPost();
     const user = JSON.parse(localStorage.getItem("user"));
     console.log(user);
