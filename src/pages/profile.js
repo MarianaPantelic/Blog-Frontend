@@ -15,7 +15,7 @@ const Profile = (props) => {
 
   const deletePost = async (id) => {
     try {
-      axios
+      await axios
         .delete(`https://marianasblog.herokuapp.com/blog/${id}`, {
           data: { _id: id },
         })
