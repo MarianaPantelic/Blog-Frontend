@@ -1,7 +1,7 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 import { QuillDeltaToHtmlConverter } from "quill-delta-to-html";
-import { Link } from "react-router-dom";
+
 const axios = require("axios").default;
 
 const Blog = (props) => {

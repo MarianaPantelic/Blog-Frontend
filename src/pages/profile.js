@@ -21,7 +21,7 @@ const Profile = (props) => {
         })
         .then((resp) => {
           props.sendGetRequest();
-          setUserPosts(props.userPosts);
+          props.sendUserPostsGetRequest();
         });
     } catch (error) {
       console.log(error);
