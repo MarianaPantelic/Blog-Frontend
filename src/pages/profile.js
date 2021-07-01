@@ -7,6 +7,11 @@ const axios = require("axios").default;
 const Profile = (props) => {
   let contentHTML = null;
   console.log(props.userPosts);
+  const [userPosts, setUserPosts] = useState([]);
+
+  useEffect(() => {
+    setUserPosts(props.userPosts);
+  });
 
   const deletePost = async (id) => {
     try {
@@ -16,6 +21,7 @@ const Profile = (props) => {
         })
         .then((resp) => {
           props.sendGetRequest();
+          setUserPosts(props.userPosts);
         });
     } catch (error) {
       console.log(error);
@@ -39,8 +45,8 @@ const Profile = (props) => {
   return (
     <Container className="mt-5">
       <div className="blog-container d-flex flex-wrap justify-content-center ">
-        {props.userPosts.length > 0 ? (
-          props.userPosts.reverse().map((element) => {
+        {userPosts.length > 0 ? (
+          userPosts.reverse().map((element) => {
             const converter = new QuillDeltaToHtmlConverter(
               element.content.ops,
               {}
