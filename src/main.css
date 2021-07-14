@@ -171,7 +171,7 @@ a:hover {
 }
 .card-text {
   padding: 0 3rem;
-  max-height: 40vh;
+  max-height: 30vh;
   overflow-y: scroll;
 }
 .likes {
