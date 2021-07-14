@@ -156,6 +156,7 @@ a:hover {
   color: #6c757c;
   margin: 2rem;
   display: block;
+  max-height: 30vh;
 }
 .post-box span {
   display: inline-block;
