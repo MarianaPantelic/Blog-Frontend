@@ -156,8 +156,8 @@ a:hover {
   color: #6c757c;
   margin: 2rem;
   display: block;
-  max-height: 60vh;
-  overflow-y: scroll;
+  /* max-height: 60vh;
+  overflow-y: scroll; */
 }
 .post-box span {
   display: inline-block;
@@ -171,6 +171,8 @@ a:hover {
 }
 .card-text {
   padding: 0 3rem;
+  max-height: 40vh;
+  overflow-y: scroll;
 }
 .likes {
   font-size: 1.8rem;
