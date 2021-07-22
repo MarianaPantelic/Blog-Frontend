@@ -17,22 +17,20 @@ img {
   font-size: 2rem;
 }
 .nav a,
-.nav a:visited {
+.nav a:visited,
+.nav a:hover,
+.logout:hover,
+.profile:hover,
+.profile i,
+.profile {
   color: white;
 }
 h2 {
   font-size: 5rem;
 }
-.logout:hover,
-.profile:hover {
-  color: white;
-}
-.profile i {
-  color: white;
-}
+
 .profile {
   margin-left: 12rem;
-  color: white;
 }
 #user {
   margin-top: 0.5rem;
