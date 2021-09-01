@@ -61,7 +61,7 @@ const Blog = (props) => {
     <Container className="mt-5">
       <div className="blog-container d-flex flex-wrap justify-content-center ">
         {props.posts.length > 0 ? (
-          props.posts.reverse().map((element) => {
+          props.posts.map((element) => {
             const converter = new QuillDeltaToHtmlConverter(
               element.content.ops,
               {}

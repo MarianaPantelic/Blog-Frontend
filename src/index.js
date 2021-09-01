@@ -41,7 +41,7 @@ const App = () => {
   const sendGetRequest = async () => {
     try {
       const resp = await axios.get("https://marianasblog.herokuapp.com/blog");
-      setPosts(resp.data);
+      setPosts(resp.data.reverse());
       console.log(resp.data);
     } catch (error) {
       console.log(error);
